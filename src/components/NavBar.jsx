@@ -12,7 +12,7 @@ function NavBar() {
 
     try {
       const response = await axios.delete(
-        "https://blogapi-production-fb2f.up.railway.app/user/logout",
+        "https://blogapi-1jcl.onrender.com/user/logout",
         {
           withCredentials: true,
           headers: {

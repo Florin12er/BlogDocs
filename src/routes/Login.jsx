@@ -24,7 +24,7 @@ function Login({ setToken }) {
     }
     try {
       const response = await axios.post(
-        "https://blogapi-production-fb2f.up.railway.app/user/login",
+        "https://blogapi-1jcl.onrender.com/user/login",
         { email, password },
         { withCredentials: true }
       );
@@ -39,29 +39,15 @@ function Login({ setToken }) {
     }
   };
 
-  const handleGuestLogin = async () => {
-    try {
-      const response = await axios.post(
-        "https://blogapi-production-fb2f.up.railway.app/user/guest"
-      );
-      const { token, userId } = response.data;
-      localStorage.setItem("token", token);
-      localStorage.setItem("userId", userId);
-      setToken(token);
-      window.location.href = "/";
-    } catch (error) {
-      setError(error.response.data.message);
-    }
-  };
 
   const handleGitHubLogin = () => {
     window.location.href =
-      "https://blogapi-production-fb2f.up.railway.app/auth/github";
+      "https://blogapi-1jcl.onrender.com/auth/github";
   };
 
   const handleGoogleLogin = () => {
     window.location.href =
-      "https://blogapi-production-fb2f.up.railway.app/auth/google";
+      "https://blogapi-1jcl.onrender.com/auth/google";
   };
 
   return (
@@ -112,14 +98,7 @@ function Login({ setToken }) {
           >
             Login
           </button>
-          <button
-            type="button"
-            onClick={handleGuestLogin}
-            className="bg-gray-300 hover:bg-gray-400 text-gray-800 py-2 px-4 rounded-md focus:outline-none w-full mt-2"
-          >
-            Login as Guest
-          </button>
-          <h3 className="text-xl mt-8">Or login with:</h3>
+                  <h3 className="text-xl mt-8">Or login with:</h3>
           <div className="flex gap-2">
             <button
               type="button"

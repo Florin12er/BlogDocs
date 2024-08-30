@@ -16,7 +16,7 @@ function Register() {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "https://blogapi-production-fb2f.up.railway.app/user/register",
+        "https://blogapi-1jcl.onrender.com/user/register",
         {
           username,
           email,

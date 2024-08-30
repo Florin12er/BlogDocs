@@ -10,7 +10,7 @@ const ApiKeyGenerator = () => {
     setError(""); // Clear previous errors
     try {
       const response = await axios.post(
-        "https://blogapi-production-fb2f.up.railway.app/user/generate-api-key",
+        "https://blogapi-1jcl.onrender.com/user/generate-api-key",
         {}, // empty body
         {
           headers: {
